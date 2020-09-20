@@ -18,16 +18,39 @@
      display: grid;
      grid-template-columns: repeat(3, auto);
      align-content: center;
+     justify-items: center;
+     align-items: center;
      /* justify-content: center; */
      width: 100px;
      height: 100px;
      margin-block-start: 13em;
-     margin-inline-start: 30em;
+     margin-inline-start: 28em;
  }
  
  .cell {
      width: 100px;
      height: 100px;
-     background-color: brown;
-     border: 1px solid white;
+     background-color: white;
+     border: 1px solid black;
+     cursor: pointer;
+ }
+ 
+ .cell:first-child,
+ .cell:nth-child(2),
+ .cell:nth-child(3) {
+     border-top: none;
+ }
+ 
+ .cell:nth-child(3n+1) {
+     border-left: none;
+ }
+ 
+ .cell:last-child,
+ .cell:nth-child(7),
+ .cell:nth-child(8) {
+     border-bottom: none;
+ }
+ 
+ .cell:nth-child(3n+3) {
+     border-right: none;
  }
