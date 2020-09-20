@@ -35,6 +35,7 @@
      cursor: pointer;
      display: flex;
      justify-content: center;
+     align-items: center;
  }
  /* remove borders */
  
@@ -62,7 +63,7 @@
  .cell.x::after {
      content: '';
      position: absolute;
-     margin-top: 33px;
+     /* margin-top: 43px; */
      width: 55px;
      height: 10px;
      background-color: teal;
@@ -74,4 +75,28 @@
  
  .cell.x::after {
      transform: rotate(-45deg);
+ }
+ 
+ .cell.circle::before,
+ .cell.circle::after {
+     content: '';
+     position: absolute;
+     border-radius: 50%;
+     /* margin-block-start: 4px; */
+     /* width: 55px;
+     height: 55px; */
+     /* background-color: teal; */
+ }
+ 
+ .cell.circle::before {
+     width: 60px;
+     height: 60px;
+     background-color: teal;
+ }
+ 
+ .cell.circle::after {
+     /* margin-top: 9px; */
+     width: 40px;
+     height: 40px;
+     background-color: white;
  }
