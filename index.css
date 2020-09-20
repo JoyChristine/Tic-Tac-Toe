@@ -33,7 +33,10 @@
      background-color: white;
      border: 1px solid black;
      cursor: pointer;
+     display: flex;
+     justify-content: center;
  }
+ /* remove borders */
  
  .cell:first-child,
  .cell:nth-child(2),
@@ -53,4 +56,22 @@
  
  .cell:nth-child(3n+3) {
      border-right: none;
+ }
+ 
+ .cell.x::before,
+ .cell.x::after {
+     content: '';
+     position: absolute;
+     margin-top: 33px;
+     width: 55px;
+     height: 10px;
+     background-color: teal;
+ }
+ 
+ .cell.x::before {
+     transform: rotate(45deg);
+ }
+ 
+ .cell.x::after {
+     transform: rotate(-45deg);
  }
