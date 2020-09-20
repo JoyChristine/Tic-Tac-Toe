@@ -1,102 +1,122 @@
- *,
- *::after,
- *::before {
-     box-sizing: border-box;
- }
- 
- body {
-     margin: 0;
- }
- 
- h1 {
-     font-size: 44px;
-     margin-inline-start: 10em;
-     font-family: cursive;
- }
- 
- .board {
-     display: grid;
-     grid-template-columns: repeat(3, auto);
-     align-content: center;
-     justify-items: center;
-     align-items: center;
-     /* justify-content: center; */
-     width: 100px;
-     height: 100px;
-     margin-block-start: 13em;
-     margin-inline-start: 28em;
- }
- 
- .cell {
-     width: 100px;
-     height: 100px;
-     background-color: white;
-     border: 1px solid black;
-     cursor: pointer;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
- /* remove borders */
- 
- .cell:first-child,
- .cell:nth-child(2),
- .cell:nth-child(3) {
-     border-top: none;
- }
- 
- .cell:nth-child(3n+1) {
-     border-left: none;
- }
- 
- .cell:last-child,
- .cell:nth-child(7),
- .cell:nth-child(8) {
-     border-bottom: none;
- }
- 
- .cell:nth-child(3n+3) {
-     border-right: none;
- }
- 
- .cell.x::before,
- .cell.x::after {
-     content: '';
-     position: absolute;
-     /* margin-top: 43px; */
-     width: 55px;
-     height: 10px;
-     background-color: teal;
- }
- 
- .cell.x::before {
-     transform: rotate(45deg);
- }
- 
- .cell.x::after {
-     transform: rotate(-45deg);
- }
- 
- .cell.circle::before,
- .cell.circle::after {
-     content: '';
-     position: absolute;
-     border-radius: 50%;
-     /* margin-block-start: 4px; */
-     /* width: 55px;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 44px;
+    margin-inline-start: 10em;
+    font-family: cursive;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100px;
+    height: 100px;
+    margin-block-start: 13em;
+    margin-inline-start: 28em;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* remove borders */
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n+1) {
+    border-left: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
+}
+
+.cell:nth-child(3n+3) {
+    border-right: none;
+}
+
+.cell.x::before,
+.cell.x::after {
+    background-color: teal;
+}
+
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    background-color: blue;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    /* margin-top: 43px; */
+    width: 55px;
+    height: 10px;
+}
+
+.cell.x::before,
+.board.x .cell:not(.x):not(.circle):hover::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after,
+.board.x .cell:not(.x):not(.circle):hover::after {
+    transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    /* margin-block-start: 4px; */
+    /* width: 55px;
      height: 55px; */
-     /* background-color: teal; */
- }
- 
- .cell.circle::before {
-     width: 60px;
-     height: 60px;
-     background-color: teal;
- }
- 
- .cell.circle::after {
-     /* margin-top: 9px; */
-     width: 40px;
-     height: 40px;
-     background-color: white;
- }
+    /* background-color: teal; */
+}
+
+.cell.circle::before {
+    width: 60px;
+    height: 60px;
+    background-color: teal;
+}
+
+.cell.circle::after {
+    /* margin-top: 9px; */
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
