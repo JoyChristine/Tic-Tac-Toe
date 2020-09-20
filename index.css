@@ -1,5 +1,33 @@
-h1 {
-    font-size: 44px;
-    margin-inline-start: 10em;
-    font-family: cursive;
-}
+ *,
+ *::after,
+ *::before {
+     box-sizing: border-box;
+ }
+ 
+ body {
+     margin: 0;
+ }
+ 
+ h1 {
+     font-size: 44px;
+     margin-inline-start: 10em;
+     font-family: cursive;
+ }
+ 
+ .board {
+     display: grid;
+     grid-template-columns: repeat(3, auto);
+     align-content: center;
+     /* justify-content: center; */
+     width: 100px;
+     height: 100px;
+     margin-block-start: 13em;
+     margin-inline-start: 30em;
+ }
+ 
+ .cell {
+     width: 100px;
+     height: 100px;
+     background-color: brown;
+     border: 1px solid white;
+ }
