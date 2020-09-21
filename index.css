@@ -116,7 +116,7 @@ h1 {
 .board.circle .cell:not(.x):not(.circle):hover::before {
     width: 60px;
     height: 60px;
-    background-color: teal;
+    /* background-color: teal; */
 }
 
 .cell.circle::after,
