@@ -14,9 +14,10 @@
     }
     
     h1 {
-        font-size: 1rem;
+        font-size: 3rem;
         font-family: cursive;
-        /* margin-inline-start: 10em; */
+        margin-left: 450px;
+        margin-top: 0;
     }
     
     .board {
@@ -144,7 +145,7 @@
     }
     
     .win-msg button:hover {
-        background-color: black;
+        background-color: teal;
         color: white;
         border-color: white;
     }
