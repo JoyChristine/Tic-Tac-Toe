@@ -4,10 +4,14 @@ const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
 let circleTurn
 
-//looping
-cellElements.forEach(cell => {
-    cell.addEventListener('click', handleClick, { once: true })
-})
+BeginGame()
+
+function BeginGame() {
+    cellElements.forEach(cell => {
+        cell.addEventListener('click', handleClick, { once: true })
+    })
+    setBoardHoverClass()
+}
 
 function handleClick(e) {
     const cell = e.target
@@ -18,17 +22,17 @@ function handleClick(e) {
     //check draw
     //switch turns 
     swapTurns()
-    setBoardHoverClass()
-}
 
+}
+//placemark
 function placeMark(cell, currentClass) {
     cell.classList.add(currentClass)
 }
-
+//swap function
 function swapTurns() {
     circleTurn = !circleTurn
 }
-
+//hover effect
 function setBoardHoverClass() {
     board.classList.remove(X_CLASS)
     board.classList.remove(CIRCLE_CLASS)
