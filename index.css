@@ -114,7 +114,7 @@ body {
     background-color: white;
 }
 
-.winning-message {
+.win-msg {
     display: none;
     position: fixed;
     top: 0;
@@ -129,7 +129,7 @@ body {
     flex-direction: column;
 }
 
-.winning-message button {
+.win-msg button {
     font-size: 3rem;
     background-color: white;
     border: 1px solid black;
@@ -137,12 +137,12 @@ body {
     cursor: pointer;
 }
 
-.winning-message button:hover {
+.win-msg button:hover {
     background-color: black;
     color: white;
     border-color: white;
 }
 
-.winning-message.show {
+.win-msg.show {
     display: flex;
 }
