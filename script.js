@@ -18,10 +18,11 @@ let circleTurn
 BeginGame()
 
 function BeginGame() {
+    circleTurn = false
     cellElements.forEach(cell => {
-        cell.addEventListener('click', handleClick, { once: true })
-    })
-    setBoardHoverClass() // hover effect at the start of the game
+            cell.addEventListener('click', handleClick, { once: true })
+        })
+        // hover effect at the start of the game
 }
 
 function handleClick(e) {
@@ -33,6 +34,7 @@ function handleClick(e) {
     //check draw
     //switch turns 
     swapTurns()
+    setBoardHoverClass()
 
 }
 //placemark
